@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>근영의 블로그 | Home</title>
+  <meta name="description" content="비즈니스, MIS, 데이터분석, 마케팅을 기록하는 개인 블로그" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://USERNAME.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="근영의 블로그" />
+  <meta property="og:description" content="비즈니스, MIS, 데이터분석, 마케팅을 기록하는 개인 블로그" />
+  <meta property="og:url" content="https://USERNAME.github.io/" />
+  <meta property="og:image" content="https://USERNAME.github.io/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#111827" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "근영의 블로그",
+    "url": "https://USERNAME.github.io/",
+    "description": "비즈니스, MIS, 데이터분석, 마케팅을 기록하는 개인 블로그",
+    "inLanguage": "ko-KR"
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b1020;          /* dark indigo */
+      --panel: #121a2f;       /* slightly lighter */
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;       /* gray-400 */
+      --accent: #7c3aed;      /* violet-600 */
+      --ring: rgba(124,58,237,.25);
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #ffffff; --panel: #ffffff; --text:#111827; --muted:#6b7280; --accent:#7c3aed; --ring:rgba(124,58,237,.25); }
+      body.dark { --bg: #0b1020; --panel:#121a2f; --text:#e5e7eb; --muted:#9ca3af; }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Noto Sans KR, "맑은 고딕", sans-serif; background: var(--bg); color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; background: color-mix(in oklab, var(--bg) 92%, black 8%); backdrop-filter: blur(8px); border-bottom: 1px solid color-mix(in oklab, var(--text) 10%, transparent); z-index: 10; }
+    .head-inner { display: flex; align-items: center; gap: 16px; padding: 14px 24px; max-width: 900px; margin: 0 auto; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight:700; }
+    .brand .dot { width:10px; height:10px; border-radius:999px; background: var(--accent); box-shadow:0 0 0 6px var(--ring); }
+    nav { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+    .btn { border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); background: color-mix(in oklab, var(--panel) 96%, black 4%); color: var(--text); padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+    .btn:focus { outline: 2px solid var(--ring); outline-offset: 2px; }
+    .search { width: 200px; background: transparent; border: 1px solid color-mix(in oklab, var(--text) 14%, transparent); color: var(--text); padding: 8px 12px; border-radius: 10px; }
+
+    .hero { padding: 56px 24px 20px; }
+    .hero h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 10px; letter-spacing: -0.02em; }
+    .hero p { margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 26px; }
+    @media (min-width: 700px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+    .card { background: color-mix(in oklab, var(--panel) 98%, black 2%); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius: 16px; overflow: clip; display: grid; grid-template-rows: auto 1fr auto; }
+    .thumb { aspect-ratio: 16/9; background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 15%, black), transparent), url('cover.jpg') center/cover; }
+    .card-body { padding: 16px; }
+    .card h3 { margin: 0 0 6px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .meta { padding: 12px 16px; display:flex; justify-content: space-between; align-items: center; border-top:1px dashed color-mix(in oklab, var(--text) 14%, transparent); color: var(--muted); font-size: 13px; }
+
+    article.prose { max-width: 780px; margin: 32px auto; padding: 24px; background: color-mix(in oklab, var(--panel) 98%, black 2%); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius: 16px; }
+    article.prose h2 { margin-top: 0; letter-spacing: -0.02em; }
+    article.prose h3 { margin-top: 22px; }
+    article.prose pre { background: #0b0f1a; color: #e5e7eb; padding: 12px; border-radius: 12px; overflow:auto; }
+    article.prose code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .toc { background: color-mix(in oklab, var(--panel) 96%, black 4%); border:1px solid color-mix(in oklab, var(--text) 10%, transparent); border-radius: 12px; padding: 12px; margin: 12px 0 22px; }
+
+    footer { margin: 40px 0 80px; text-align: center; color: var(--muted); }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head-inner">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/" aria-label="홈으로">근영의 블로그</a>
+      </div>
+      <nav>
+        <input id="search" class="search" placeholder="검색 (제목/태그)" aria-label="글 검색" />
+        <button class="btn" id="themeBtn" aria-pressed="false" aria-label="테마 전환">🌓</button>
+        <a class="btn" href="/rss.xml" aria-label="RSS 구독">RSS</a>
+        <a class="btn" href="https://github.com/USERNAME/USERNAME.github.io" aria-label="깃허브 저장소">Repo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="tagline">
+      <h1 id="tagline">비즈니스·데이터·마케팅을 기록합니다</h1>
+      <p>기본 HTML로 만든 빠른 정적 블로그. GitHub Pages로 무료 호스팅!</p>
+    </section>
+
+    <!-- 글 목록 카드 -->
+    <section aria-labelledby="latest-posts">
+      <h2 class="sr-only" id="latest-posts">최근 글</h2>
+      <div class="grid" id="postGrid" aria-live="polite"></div>
+    </section>
+
+    <!-- 샘플 단일 포스트 (index에 함께 노출하거나 /posts/hello-world.html 로 분리해도 됩니다) -->
+    <article class="prose" id="postView" hidden>
+      <nav class="toc" id="toc" aria-label="목차"></nav>
+      <h2 id="postTitle">제목</h2>
+      <p id="postMeta" style="color:var(--muted)">작성일 · 태그</p>
+      <div id="postContent"></div>
+      <p style="margin-top:24px"><a href="#" id="backToList">↩ 글 목록으로</a></p>
+    </article>
+
+    <footer>
+      © <span id="year"></span> 근영 · Built with HTML · Hosted on GitHub Pages
+    </footer>
+  </main>
+
+<script>
+// --- 간단한 라우팅/렌더링 (vanilla JS) ---
+const posts = [
+  {
+    slug: 'hello-world',
+    title: '블로그 오픈: GitHub Pages + 순수 HTML',
+    date: '2025-09-06',
+    tags: ['GitHub', 'HTML', '블로그'],
+    cover: 'covers/hello.jpg', // 선택 사항
+    excerpt: '깃허브 페이지로 10분만에 HTML 블로그 여는 법과 폴더 구조 템플릿 공유.',
+    html: `
+      <p>이 블로그는 <strong>순수 HTML</strong>에 약간의 JS만 더해 만든 초심자 친화 정적 블로그입니다.</p>
+      <h3 id="why">왜 HTML만으로?</h3>
+      <ul>
+        <li>속도가 빠르고 유지비 0원</li>
+        <li>프레임워크 의존성 없음</li>
+        <li>원리 파악과 커스터마이즈가 쉬움</li>
+      </ul>
+      <h3 id="how">어떻게 배포하나?</h3>
+      <ol>
+        <li>GitHub에 <code>USERNAME.github.io</code> 저장소 생성</li>
+        <li><code>index.html</code> 업로드</li>
+        <li>잠시 뒤 <code>https://USERNAME.github.io</code> 접속</li>
+      </ol>
+      <p>추후 글은 <code>/posts</code> 폴더에 개별 HTML로 만들어도 되고, 이처럼 데이터 배열에 추가해도 됩니다.</p>
+      <pre><code>// 새 글 추가 예시
+posts.push({ slug: 'mis-notes', title: 'MIS 8장 보안관리 핵심', date: '2025-09-07', tags:['MIS','보안'], html:`&lt;h3&gt;핵심 정리&lt;/h3&gt; ...` });
+</code></pre>
+    `
+  },
+  {
+    slug: 'excel-tips',
+    title: '엑셀 통계 함수 치트시트',
+    date: '2025-09-05',
+    tags: ['Excel','통계'],
+    cover: 'covers/excel.jpg',
+    excerpt: 'RANK, PERCENTILE, CORREL, LINEST 등 자주 쓰는 함수 예시를 한 장으로 정리.',
+    html: `
+      <h3 id="rank">RANK</h3>
+      <pre><code>=RANK(A2, $A$2:$A$101, 0)   // 큰 값이 1위</code></pre>
+      <h3 id="linest">LINEST</h3>
+      <pre><code>=LINEST(y_range, x_range, TRUE, TRUE)</code></pre>
+      <p>자세한 해설은 수업 노트 링크 참고.</p>
+    `
+  }
+];
+
+const grid = document.getElementById('postGrid');
+const view = document.getElementById('postView');
+const back = document.getElementById('backToList');
+const searchInput = document.getElementById('search');
+
+function renderList(list = posts) {
+  view.hidden = true;
+  grid.innerHTML = '';
+  grid.parentElement.hidden = false;
+  list.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'card';
+    const thumb = document.createElement('a');
+    thumb.href = `#/${p.slug}`;
+    thumb.className = 'thumb';
+    if (p.cover) thumb.style.backgroundImage = `linear-gradient(135deg, color-mix(in oklab, var(--accent) 15%, black), transparent), url('${p.cover}')`;
+    const body = document.createElement('div');
+    body.className = 'card-body';
+    body.innerHTML = `<h3><a href="#/${p.slug}">${p.title}</a></h3><p>${p.excerpt ?? ''}</p>`;
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.innerHTML = `<span>${p.date}</span><span>${(p.tags||[]).join(' · ')}</span>`;
+    card.append(thumb, body, meta);
+    grid.appendChild(card);
+  });
+}
+
+function renderToc(container) {
+  const hs = container.querySelectorAll('h2, h3');
+  if (!hs.length) return (document.getElementById('toc').hidden = true);
+  const ul = document.createElement('ul');
+  hs.forEach(h => {
+    if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g,'-');
+    const li = document.createElement('li');
+    li.style.listStyle = 'square inside';
+    li.innerHTML = `<a href="#${h.id}">${h.textContent}</a>`;
+    ul.appendChild(li);
+  });
+  const toc = document.getElementById('toc');
+  toc.innerHTML = '<strong>이 글의 목차</strong>';
+  toc.appendChild(ul);
+  toc.hidden = false;
+}
+
+function renderPost(slug) {
+  const p = posts.find(x => x.slug === slug);
+  if (!p) { location.hash = '#/'; return; }
+  grid.parentElement.hidden = true;
+  view.hidden = false;
+  document.getElementById('postTitle').textContent = p.title;
+  document.getElementById('postMeta').textContent = `${p.date} · ${(p.tags||[]).join(', ')}`;
+  const content = document.getElementById('postContent');
+  content.innerHTML = p.html;
+  renderToc(content);
+  document.title = `${p.title} | 근영의 블로그`;
+}
+
+function router() {
+  const hash = decodeURIComponent(location.hash || '#/');
+  if (hash === '#/' || hash === '#') return renderList();
+  const [, slug] = hash.split('/');
+  renderPost(slug);
+}
+window.addEventListener('hashchange', router);
+router();
+
+// 검색
+searchInput.addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  const filtered = posts.filter(p =>
+    p.title.toLowerCase().includes(q) || (p.tags||[]).join(' ').toLowerCase().includes(q)
+  );
+  renderList(filtered);
+});
+
+// 뒤로가기
+back.addEventListener('click', e => { e.preventDefault(); location.hash = '#/'; });
+
+// 테마 토글
+const themeBtn = document.getElementById('themeBtn');
+const saved = localStorage.getItem('theme');
+if (saved === 'dark') document.body.classList.add('dark');
+if (saved === 'light') document.body.classList.remove('dark');
+
+function toggleTheme(){
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+}
+
+themeBtn.addEventListener('click', () => {
+  toggleTheme();
+  themeBtn.setAttribute('aria-pressed', document.body.classList.contains('dark'));
+});
+
+// 연도
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- (선택) 간단 통계/애널리틱스 스니펫 자리: Plausible/GA 등 -->
+</body>
+</html>
